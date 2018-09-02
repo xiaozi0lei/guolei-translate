@@ -1,0 +1,136 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="generator" content="HTML Tidy, see www.w3.org">
+
+    <title>guolei translate For Chrome</title>
+
+    <style type="text/css">
+        /*body 的整体样式*/
+        body {
+            font-family: Microsoft YaHei, serif;
+            font-size: 13px;
+            color: #000000;
+            min-width: 200px;
+            overflow-x: hidden;
+            background-image: url(image/youdaoskin.jpg);
+        }
+
+        /*图片的样式*/
+        img {
+            margin: 5px;
+            border: 0 solid black;
+            vertical-align: middle;
+            width: 82px;
+            height: 22px;
+        }
+
+        /*搜索框的样式*/
+        input.smallInput {
+            border: 1px solid black;
+            font-size: 9pt;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: normal;
+            height: 18px;
+            line-height: normal
+        }
+    </style>
+</head>
+
+<body>
+
+<table id="mainTable" cellpadding="1" width=230px style="word-break:keep-all;">
+    <tr>
+        <td align="center">
+            <!-- 弹出框的上方 logo 图片 -->
+            <img src="image/logo.png" alt="logo"/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <!-- 弹出框的上方搜索框和搜索按钮 -->
+            <input type="text" name="word" id="word" style="width:160px" class="smallInput" title="查询">
+            <input type="button" id="queryButton" value="查询">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <!-- 搜索结果的占位元素 -->
+            <div id='result' style=' white-space:nowrap;'></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <!-- 文本显示 - 选项设置 -->
+            <div id='optionSetupText'>
+                <strong>选项设置:</strong>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <!-- 划词翻译的开关 -->
+            <div id='underlineClosedCheckbox'>
+                <input type="checkbox" id="dict_disable" title="关闭划词翻译"> 关闭划词翻译
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <!-- 指词即译，实时翻译，需要按住 ctrl -->
+            <div id='instantTranslateCheckbox'>
+                <input type="checkbox" id="ctrl_only" title="打开指词即译"> 指词即译模式（按下Ctrl键指词）
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <!-- 仅对英文划译 -->
+            <div id='onlyEnglishCheckbox'>
+                <input type="checkbox" id="english_only" title="打开仅对英文划译"> 仅对英文划译
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <!-- 发音设置 -->
+            <div id='pronunciationText'>
+                <input type="checkbox" style="visibility: hidden" title="发音方式设置"> 发音方式：
+                <table style="margin-left: 20px">
+                    <tr>
+                        <td>
+                            <input type="radio" id="autoplay" name="autoPlay" title="自动发音">自动发音
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" id="playwhenhovering" name="playWhenHover" title="悬浮发音" checked>悬浮发音
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" id="playwhenclicking" name="playWhenClick" title="点击发音">点击发音
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <!-- 意见和反馈的超链接 -->
+            <div style="font-size:10px;float:right;">
+                <a href="#" id="feedback">意见反馈</a>&nbsp;<a href="#" id="about">关于</a>
+            </div>
+        </td>
+    </tr>
+</table>
+
+</body>
+<script type="text/javascript" src="js/options.js"></script>
+</html>
+

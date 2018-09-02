@@ -1,0 +1,55 @@
+{
+  // 插件的名字，显示在插件名字
+  "name": "guolei-translate划词插件",
+  // 自己开发的插件版本
+  "version": "0.0.1",
+  // manifest_version 指定清单文件格式的版本，在Chrome18之后，都是2，这个值直接设定为2
+  "manifest_version": 2,
+  // 插件的描述信息，显示在插件名字下方
+  "description": "guolei-translate",
+  // 插件图标的属性，右上角显示的小图标
+  "browser_action": {
+    "default_icon": "image/icon_dict.png",
+    "default_popup": "options.html"
+  },
+
+
+
+  "background": {
+    "scripts": [
+      "js/options.js",
+      "js/background.js"
+    ]
+  },
+
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "js": [
+        "js/speech.js",
+        "js/lookup.js",
+        "js/rlog.v1.js"
+      ],
+      "match_about_blank": true,
+      "matches": [
+        "\u003Call_urls>"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+      "icons": {
+         "128": "image/icon-128.png",
+         "64": "image/icon.png"
+      },
+  //   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDNfmwkcubNM4WFRsykuHp4I/pbmMMvSx4eLHaaE/ZM/jtEjaF+vBuQymrZHaXrLGtS/aqI75l98VTl5rhWWzqgKUsxLMoVflrLvZv0sjlJaPZ1T9B4jH28M7FZY2D1CT6sPntjqIYwJDt29NuwdU+lozVEJKc9R9SQUlf/GQ08GQIDAQAB",
+  "options_page": "options.html",
+  "permissions": [
+    "\u003Call_urls>"
+  ],
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "web_accessible_resources": [
+    "image/ab20.png",
+    "image/ydd-sprite.png",
+    "image/speech.png"
+  ]
+}
