@@ -12,16 +12,13 @@
     "default_icon": "image/icon_dict.png",
     "default_popup": "options.html"
   },
-
-
-
+  // 这里指定的脚本，会在页面加载的时候自动执行
+  // scripts 中的数组顺序就是脚本加载的顺序
   "background": {
     "scripts": [
-      "js/options.js",
       "js/background.js"
     ]
   },
-
   "content_scripts": [
     {
       "all_frames": true,
@@ -37,11 +34,10 @@
       "run_at": "document_end"
     }
   ],
-      "icons": {
-         "128": "image/icon-128.png",
-         "64": "image/icon.png"
-      },
-  //   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDNfmwkcubNM4WFRsykuHp4I/pbmMMvSx4eLHaaE/ZM/jtEjaF+vBuQymrZHaXrLGtS/aqI75l98VTl5rhWWzqgKUsxLMoVflrLvZv0sjlJaPZ1T9B4jH28M7FZY2D1CT6sPntjqIYwJDt29NuwdU+lozVEJKc9R9SQUlf/GQ08GQIDAQAB",
+  "icons": {
+    "128": "image/icon-128.png",
+    "64": "image/icon.png"
+  },
   "options_page": "options.html",
   "permissions": [
     "\u003Call_urls>"
